@@ -21,6 +21,9 @@ struct ContentView: View {
                 NavigationLink(destination: NetworkView()) {
                     NavigationLineView(lineName: "NetworkView")
                 }
+                NavigationLink(destination: MicrophoneView()) {
+                    NavigationLineView(lineName: "MicrophoneView")
+                }
             }
             .navigationTitle("ToolBox")
         }

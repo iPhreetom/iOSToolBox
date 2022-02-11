@@ -15,6 +15,7 @@
 		2B2A881527B0DF14006CEC64 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2A881427B0DF14006CEC64 /* CameraView.swift */; };
 		2B2A881727B0E008006CEC64 /* NavigationLineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2A881627B0E008006CEC64 /* NavigationLineView.swift */; };
 		2B2A881A27B0E1B7006CEC64 /* NetworkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2A881927B0E1B7006CEC64 /* NetworkView.swift */; };
+		2B2A881C27B0E955006CEC64 /* MicrophoneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2A881B27B0E955006CEC64 /* MicrophoneView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,8 @@
 		2B2A881427B0DF14006CEC64 /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
 		2B2A881627B0E008006CEC64 /* NavigationLineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationLineView.swift; sourceTree = "<group>"; };
 		2B2A881927B0E1B7006CEC64 /* NetworkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkView.swift; sourceTree = "<group>"; };
+		2B2A881B27B0E955006CEC64 /* MicrophoneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MicrophoneView.swift; sourceTree = "<group>"; };
+		2BAA2ED427B51EC40067E289 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +62,7 @@
 		2B2A880327B0D97D006CEC64 /* ToolBox */ = {
 			isa = PBXGroup;
 			children = (
+				2BAA2ED427B51EC40067E289 /* Info.plist */,
 				2B2A880427B0D97D006CEC64 /* ToolBoxApp.swift */,
 				2B2A880627B0D97D006CEC64 /* ContentView.swift */,
 				2B2A881627B0E008006CEC64 /* NavigationLineView.swift */,
@@ -81,6 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				2B2A881927B0E1B7006CEC64 /* NetworkView.swift */,
+				2B2A881B27B0E955006CEC64 /* MicrophoneView.swift */,
 				2B2A881427B0DF14006CEC64 /* CameraView.swift */,
 				2B2A881227B0DBA3006CEC64 /* SwiftUIView.swift */,
 			);
@@ -160,6 +165,7 @@
 				2B2A880727B0D97D006CEC64 /* ContentView.swift in Sources */,
 				2B2A880527B0D97D006CEC64 /* ToolBoxApp.swift in Sources */,
 				2B2A881327B0DBA3006CEC64 /* SwiftUIView.swift in Sources */,
+				2B2A881C27B0E955006CEC64 /* MicrophoneView.swift in Sources */,
 				2B2A881A27B0E1B7006CEC64 /* NetworkView.swift in Sources */,
 				2B2A881527B0DF14006CEC64 /* CameraView.swift in Sources */,
 				2B2A881727B0E008006CEC64 /* NavigationLineView.swift in Sources */,
@@ -296,6 +302,9 @@
 				DEVELOPMENT_TEAM = 3YA53938QD;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ToolBox/Info.plist;
+				INFOPLIST_KEY_LSSupportsOpeningDocumentsInPlace = YES;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Record need";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -325,6 +334,9 @@
 				DEVELOPMENT_TEAM = 3YA53938QD;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ToolBox/Info.plist;
+				INFOPLIST_KEY_LSSupportsOpeningDocumentsInPlace = YES;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Record need";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

@@ -8,8 +8,28 @@
 import SwiftUI
 
 struct SwiftUIView: View {
+    @State var counter:Int = 0
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            Button(action: {
+                self.counter += 1
+            }, label: {
+                Text("Counter: \(counter)")
+            })
+            Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+            Button(action: {
+                self.counter = 0
+            }, label: {
+                Text("Reset counter")
+            })
+        }.onAppear {
+            let db = UserDefaults.init()
+            counter = db.integer(forKey: "counter")
+        }.onDisappear(perform: {
+            let db = UserDefaults.init()
+            db.set(counter, forKey: "counter")
+        })
     }
 }
 
