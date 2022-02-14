@@ -9,6 +9,8 @@ import SwiftUI
 
 struct SwiftUIView: View {
     @State var counter:Int = 0
+    let semaphore = DispatchSemaphore(value: 0)
+    let concurrentQueue = DispatchQueue(label: "FYTConcurrentQueue", attributes: .concurrent)
     
     var body: some View {
         VStack {
@@ -26,9 +28,19 @@ struct SwiftUIView: View {
         }.onAppear {
             let db = UserDefaults.init()
             counter = db.integer(forKey: "counter")
+            for _ in 1..<10 {
+                concurrentQueue.async {
+                    sleep(10000)
+                }
+            }
         }.onDisappear(perform: {
             let db = UserDefaults.init()
             db.set(counter, forKey: "counter")
+            for _ in 1..<64 {
+                concurrentQueue.async {
+                    semaphore.wait()
+                }
+            }
         })
     }
 }
